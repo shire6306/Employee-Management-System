@@ -1,0 +1,30 @@
+EMS FINAL UPDATED PROJECT
+
+BACKEND (PowerShell):
+cd backend
+.\.venv\Scripts\Activate.ps1   (if your venv exists; otherwise create one)
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+
+If you need an Admin account:
+python manage.py createsuperuser
+
+FRONTEND (second terminal):
+cd frontend
+npm install
+npm run dev
+
+Open: http://localhost:5173/
+
+NEW FEATURES:
+- Admin / General Manager / Department Manager / Employee roles
+- User Management: Admin and General Manager create Employee/Department Manager accounts and reset passwords
+- Department Tasks: Admin and General Manager create tasks and set Low/Medium/High/Urgent priority
+- Department users can update task status: Pending / In Progress / Completed
+- Admin: Activity Log + Audit Log + Error Log
+- General Manager: Activity Log + Audit Log (no Error Log)
+- Role-based navigation and backend permissions
+
+IMPORTANT:
+Run `python manage.py migrate` before testing the new features.
